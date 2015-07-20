@@ -29,6 +29,7 @@
 				<attribute name="Main-Class" value="cfmlengcrypt.Main" />
 				<attribute name="Class-Path" value="${cfmlengcrypt.lib.list}" />
 			</manifest>
+      <zipfileset src="${cfmlengcrypt.basedir}/lib/not-yet-commons-ssl-0.3.11.jar"/>
 		</jar>
 		<delete dir="${cfmlengcrypt.basedir}/bin" />
 	</target>
@@ -57,7 +58,7 @@
 
 	<target name="cfmlengcrypt.mvn" depends="cfmlengcrypt.jar">
            <pom-and-deploy pomid="cfmlengcrypt.pom" artifact="cfmlengcrypt.jar" packaging="jar" buildtype="release"
-            groupId="cfdistro.lib" artifactId="cfmlengcrypt" version="2.0.0.0" name="cfmlengcrypt" />
+            groupId="cfdistro.lib" artifactId="cfmlengcrypt" version="2.1.0.0" name="cfmlengcrypt" />
 
 	</target>
 
